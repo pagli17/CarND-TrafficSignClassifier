@@ -43,24 +43,25 @@ signs data set:
 
 Here is an exploratory visualization of the data set. In the picture you can find an histogram showing the distribution of the samples among the different datasets (training,validation, testing): 
 
-[histograms]: ./histograms.png "Histogram"
+![histograms](./histograms.png)
 
 The samples are unbalanced into a dataset though the sample distribution is equal for all datasets.
 
 ### Design and Test a Model Architecture
 
-#### 1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
+#### 1. Describe how you preprocessed the image data.
+What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
 
 
-# - Rescale data so pixels have values between -1 and 1. DONE
-# - Z-Score normalisation. NOT DONE
-# - Histogram pixel intensity equalization. NOT DONE
-# - Oversample undersampled data. DONE
-# - Experiment with different network architectures, or just change the dimensions of the LeNet layers DONE
-# - Add regularization features like drop out or L2 regularization to make sure the network doesn't overfit the training data DONE
-# - Tune the hyperparameters DONE
+- Rescale data so pixels have values between -1 and 1. DONE
+- Z-Score normalisation. NOT DONE
+- Histogram pixel intensity equalization. NOT DONE
+- Oversample undersampled data. DONE
+- Experiment with different network architectures, or just change the dimensions of the LeNet layers DONE
+- Add regularization features like drop out or L2 regularization to make sure the network doesn't overfit the training data DONE
+- Tune the hyperparameters DONE
 
-As a first step, I wondered if convert the images to grayscale might be a good idea but eventually I decided not to do so as I thought the colors may
+As a first step, I wondered if converting the images to grayscale might be a good idea but eventually I decided not to do so as I thought the colors may
 highly increase the possibility to correctly classify a traffic sign since colors is important for that.
 
 At first I tried oversampling the training and validation sets by settings all samples to the number of the highest frequent sample. After a few trials I realised that
@@ -119,13 +120,14 @@ The final testing accuracy together with the results on the validation accuracy 
 ### Test a Model on New Images
 
 #### 1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
-
 Here are five German traffic signs that I found on the web:
-[Priority road]: ./00010.ppm "Priority road"
-[Speed limit (100km/h)]: ./00011.ppm "Speed limit (100km/h)"
-[Slippery]: ./00012.ppm "Slippery road"
-[Speed limit (100km/h)]: ./00013.ppm "Speed limit (100km/h)"
-[Speed limit (70km/h)]: ./00014.ppm "Speed limit (70km/h)"
+![Functionalities](./Functionalities.png)
+
+![Priority road](./00010.ppm)
+[Speed limit (100km/h)](./00011.ppm)
+![Slippery]()./00012.ppm)
+![Speed limit (100km/h)](./00013.ppm)
+![Speed limit (70km/h)](./00014.ppm)
 
 
 The third and fourth image highly differ from the other images in pixel intensity as they are very dark and therefore might be hard to classify
